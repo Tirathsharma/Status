@@ -1,0 +1,180 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en,hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}  {% endblock %}</title>
+    <!--Google Icon Font-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/css/main.css'%}">
+    <script src="{% static 'js/fade.js' %}"></script>
+    
+</head>
+<body onload="myFunction()" >
+  <div id="Myloader"></div>
+<!---Navbar-->
+<section style="display:none;" id="preloader" class="animate-bottom-preloader">
+<div class="main-nav navbar-fixed-top scrolled">
+    <nav class="navbar navbar-expand-lg navbar-dark container">
+        <a class="navbar-brand" href="/"><span class="hedding-title"><img src="{% static 'image/Logo.png' %}" class="logo"></span>CODITRO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav  ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/services">services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Our clients</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Board
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/login">User Login</a>
+                <a class="dropdown-item" href="/signup">User register</a>
+                <!-- <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div> -->
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+</div>
+<!--Nav Bar-->
+
+{% block content %}
+
+{% endblock %}
+<!-- ======= Footer ======= -->
+
+<footer>
+<div class="container">
+<div class="row">
+  <div class="col-md-12 p-4  quate">
+    <hr/ class="bg-light w-100">
+    <h3 class="text-left">Welcome to our eBusiness company <a class="sus-btn text-right" href="#">Get A quate</a></h3>
+    <hr/ class="bg-light w-100">
+  </div>
+  <div class="col-md-3 footer-1">
+    <img src="{% static 'image/Logo.png' %}" class="logo">
+    <a class="logo-text" href="#">CODITRO</a>
+    <hr/ class="bg-light w-50">
+    <p>coditro approach is to development & digital marketing is centered around learning & growing with our clients.</p>
+  </div>
+  <div class="col-md-3 footer-2">
+    <h3 class="p-1">Go to</h3>
+    <hr/ class="bg-light w-75">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">services</a></li>
+      <li><a href="#">Teams</a></li>
+      <li><a href="#">E-logs</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  <div class="col-md-3 footer-2">
+    <h3 class="p-1">Industries We cover</h3>
+    <hr/ class="bg-light w-75">
+    <ul>
+      <li><a href="#">Healthcare</a></li>
+      <li><a href="#">Banking</a></li>
+      <li><a href="#">Retail</a></li>
+      <li><a href="#">E-commerce</a></li>
+      <li><a href="#">Insurance</a></li>
+      <li><a href="#">Petrolium</a></li>
+    </ul>
+  </div>
+  <div class="col-md-3 footer-2">
+    <h3 class="p-1">Services</h3>
+    <hr/ class="bg-light w-75">
+    <ul>
+      <li><a href="#">Business Intelligence</a></li>
+      <li><a href="#">Software Migration</a></li>
+      <li><a href="#">Mobile App Development</a></li>
+      <li><a href="#">Web App Development</a></li>
+      <li><a href="#">Staff Augmentation</a></li>
+      <li><a href="#">Training and Development</a></li>
+    </ul>
+  </div>
+  <div class="col-md-6 p-4 social-media">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.4604655706726!2d-122.33125278434767!3d37.94303307972918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80857823499013f9%3A0x886279acaad83d9a!2s12651%20San%20Pablo%20Ave%2C%20Richmond%2C%20CA%2094805%2C%20USA!5e0!3m2!1sen!2sin!4v1633452174424!5m2!1sen!2sin" style="border:0;width: 100%;height: 200px;" allowfullscreen="True" loading="lazy"></iframe>
+    <ul class="p-4">
+      <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fa fa-phone-square" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+    </ul>
+
+  </div>
+  <div class="col-md-6 p-4">
+    <div class="form contact-form">
+      <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+        <div class="form-group">
+          <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+          <div class="validate"></div>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+          <div class="validate"></div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+          <div class="validate"></div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+          <div class="validate"></div>
+        </div>
+        <div class="text-left"><button type="submit" class="btn text-white" style="background: #e03a3c;">Send Message</button></div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<div class="text-center py-4">
+Copyright &#169; 2021-2022 by coditro.com
+</div>
+</footer>
+</section>
+<!-- <--End  Footer -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="{% static 'js/file.js' %}"></script>
+<script src="https://use.fontawesome.com/b6f4d8aec0.js"></script>
+<script>
+    $(document).ready(function(){
+      $(window).scroll(function() { // check if scroll event happened
+        if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
+          $(".navbar-fixed-top").css("background-color", "#0e1014");
+          $(".navbar-fixed-top").css("height", "auto"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+        } else {
+          $(".navbar-fixed-top").css("background-color", "transparent"); // if not, change it back to transparent
+        }
+      });
+    });
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static%}
+{% block title %} about {% endblock %}
+{% block content %}  
+  <section  id="about_image_back_service" style="background:url('/static/image/about3.jpg');background-repeat: no-repeat;  background-attachment: fixed;background-size: cover; background-position: center; height: auto;">
+      <div style="background: #000000b4;padding:0px 0px 100px 0px;">
+        <div class="container">
+          <h1 class="text-center services-heading">About Us</h1>
+          <h4 class="text-center text-white">Revolutionising the concept of software development through path-breaking innovation</h4>
+          <p  class="text-center text-white">We are innovators, thinkers, and makers at your service. Dedicating our extensive knowledge to create user-centric designs backed.</p>
+        </div>
+       </div>
+  </section>
+    <div class="container">
+      <div class="row py-4 row-contents">
+        {% for x in about %}
+        {% if forloop.counter|divisibleby:2 %}
+        <div class="col-md-4 py-4">
+          <img src="/media/{{x.about_image}}" class="image-view">
+        </div>
+        <div class="col-md-8 py-4">
+          <h5 class="text-justify services-subheading">{{x.name}}</h5>
+           <p class="text-justify">{{x.Long_description | safe}}</p>  
+        </div>
+        {% else %}
+        <div class="col-md-8 py-4">
+           <h5 class="text-justify services-subheading">{{x.name}}</h5>
+           <p class="text-justify">{{x.Long_description | safe}}</p>  
+        </div>
+        <div class="col-md-4 py-4">
+          <img src="/media/{{x.about_image}}" class="image-view">
+        </div>
+        {% endif %}
+
+        {% endfor %}      
+      </div>
+      </div>
+
+ {% endblock %}
+  

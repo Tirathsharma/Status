@@ -1,0 +1,26 @@
+{% load static%}
+<!-- ======= Skills Section ======= -->
+<section class="counter-area">
+          <div class="container">
+            <!-- section-heading end -->
+            <div class="row">
+              <!-- single-skill start -->
+              {% for counter in counterdict %}
+              <div class="col-xs-12 col-sm-3 col-md-3 text-center">
+                <div class="single-skill">
+                  <div class="progress-circular">
+                      <div class="counter-box colored">
+                        <i class="{{counter.float_icon}}" id="counter-icon"></i>
+                        <h2  class="progress-h4 main_data">{{counter.counter}} +</h2>
+                      </span>
+                        <h3 class="progress-h4">{{counter.name}}</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+              <!-- single-skill end -->
+        </div>
+    </section>

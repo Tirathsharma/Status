@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static%}
+{% block title %} Signup {% endblock %}
+{% block content %}
+<section class="login-container">
+   <section  id="about_image_back_service" style="background:url('/static/image/about3.jpg');background-repeat: no-repeat;  background-attachment: fixed;background-size: cover; background-position: center; height: auto;">
+      <div style="background: #000000b4;padding:0px 0px 100px 0px;">
+        <div class="container">
+          <h1 class="text-center services-heading">Register</h1>
+          <!-- <h4 class="text-center text-white">Revolutionising the concept of software development through path-breaking innovation</h4>
+          <p  class="text-center text-white">We are innovators, thinkers, and makers at your service. Dedicating our extensive knowledge to create user-centric designs backed.</p> -->
+        </div>
+       </div>
+  </section>
+<div class="container py-4">
+     <div class="row" style="margin: 100px 0px 50px 0px;">
+        <div class="col-md-12 col-sm-12 shadow-lg p-4 mb-4 bg-white">
+            <!-- <h3 class="text-center text-dark">Register</h3> -->
+            <div class="login-form">
+              <form method="POST" action="/signup">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="Username">Username</label>
+                        <input type="Username" class="form-control" name="Username" placeholder="Username">
+                     </div>
+                    <div class="form-group col-md-4">
+                    <label for="staticEmail">Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="email">
+                 </div>
+                 <div class="col-md-4 form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password1" placeholder="Password">
+                 </div>
+                 <div class="col-md-4 form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" class="form-control" name="password2" placeholder="Confirm Password">
+                 </div>
+                 <div class="form-group col-md-4">
+                    <label for="phone">phone</label>
+                    <input type="tel" class="form-control" name="phone" placeholder="Phone number">
+                 </div>
+                 <div class="col-md-4">
+                    <label>Gender</label>
+                    <div class="input-group">
+                        <select class="custom-select" id="inputGroupSelect02" name='gender'>
+                          <option selected>Choose...</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          <option value="other">Other</option>
+                        </select>
+                 </div>
+                 </div>
+                 
+                 <input type="hidden" name="register" value="{{ request.GET.register }}"/>
+                 <button type="submit" class="btn btn-primary">Signup</button>
+                </div>
+                </form>
+
+        </div>
+        </div>  
+    </div>   
+    </div>
+</section>
+{% endblock %}

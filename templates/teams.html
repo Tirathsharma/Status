@@ -1,0 +1,48 @@
+{% load static%}
+    <!-- ======= Team Section ======= -->
+    {% block card %} 
+    <div id="services" class="services-area p-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline services-head text-center">
+              <h2>- Masters we have - </h2>
+            </div>
+          </div>
+        </div>
+    
+      
+        <div class="row">
+          {% for team in teamdict %}
+          <div class="col-md-4 p-2">
+          <div class="card border w-100" style="box-shadow: 0 0  20px;height: 100%">
+              <img class="card_image" src="/media/{{team.team_image}}" alt="Card image cap">
+              <div class="card-body teams-front-end">
+                <h5 class="h6 fw-bold text-center">{{team.name}}</h5>
+                <p class="card-text text-center">{{team.position}}</p>
+                <!-- <ul class="text-center">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul> -->
+              </div>
+            </div>
+          </div>
+            {% endfor%}
+      </div>    
+    </div>          
+    </div>
+    {% endblock %}
+ 

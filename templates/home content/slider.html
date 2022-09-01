@@ -1,0 +1,33 @@
+<div id="carouselExampleIndicators" class="carousel carousel-fade  slide slider" data-ride="carousel">
+  <svg class="svg_slider">
+    <circle cx="750" cy="0" r="800"  fill="black"  />
+  </svg>
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+      {% for slider in dataslider %}
+      <!-- <div class="carousel-item active"> -->
+        <div class="carousel-item {% if forloop.first %} active {% endif %}">
+        <img class="d-block image_Slider" src="media/{{slider.sliderimage}}" alt="First slide">
+        <div class="carousel-caption  flex-row align-items-center justify-content-center">
+              <h5 class="heading">{{slider.name}}</h5>       
+              <p >{{slider.description}}</p>  
+              <a class="btn-get-started scrollto">Get Started</a>        
+          </div>
+      </div>
+      {% endfor %}
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+<!---slider-->

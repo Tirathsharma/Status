@@ -1,0 +1,42 @@
+{% load static%}
+    <!-- ======= Team Section ======= -->
+    {% block card %} 
+    <div id="services" class="services-area p-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline services-head text-center">
+              <h2>- Masters we have - </h2>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="row">
+            {% for team in teamdict %}
+            {% if  forloop.counter <= 6 %}
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="our-team">
+                <div class="picture">
+                  
+                  <img class="img-fluid" src="/media/{{team.team_image}}">
+                </div>
+                <div class="team-content">
+                  <h3 class="name">{{team.name}}</h3>
+                  <h4 class="title">{{team.position}}</h4>
+                </div>
+                <!-- <ul class="social">
+                  <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a></li>
+                  <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a></li>
+                  <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus" aria-hidden="true"></a></li>
+                  <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a></li>
+                </ul> -->
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>   
+    </div>          
+    </div>
+    {% endblock %}
+ 

@@ -1,0 +1,38 @@
+{% load static%}
+   <!-- ======= Testimonials Section ======= -->
+   <div id="about" class="about-area area-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="section-headline text-center">
+            <h2>- WHAT CLIENT SAYS -</h2>
+         </div>
+        </div>
+      </div>
+      </div>
+      </div>
+   <div id="carouselExample" class="carousel slide py-10" style="background: #0e1014;color:white; padding: 100px 20px;" data-ride="carousel">
+    <ol class="carousel-indicators py-10">
+      <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExample" data-slide-to="1"></li>
+      <li data-target="#carouselExample" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner container">
+      {% for client_Viewdicts in client_Viewdict %}
+      <div class="carousel-item {% if forloop.first %} active {% endif %} p-4 text-center">
+        <h6>{{client_Viewdicts.Long_description| safe}}</h6>
+        <h4> {{client_Viewdicts.name}}</h4>
+      </div>
+      {% endfor %}
+    </div>
+    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
+   

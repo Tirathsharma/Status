@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+{% for services in services %}
+<section  id="about_image_back_service" style="background:url('/media/{{services.related.backgroud_image}}');background-repeat: no-repeat;  background-attachment: fixed;background-size: cover; background-position: center; height: auto;text-align: center;">
+  <div style="background: #000000b4;padding:0px 0px 100px 0px;">
+    <div class="container">
+      <h1 class="text-center services-heading">{{services.name}}</h1>
+      <h4 class="text-center  text-white">{{services.Short_description}}</h4>
+      <!-- <p  class="text-center text-white">From Startups to Enterprises, Products to Service Companies, Mobcoder caters to all the app development requirements in the same manner.</p> -->
+    </div>
+   </div>
+</section>
+<section>
+  <div class="container">
+  <div class="row py-4">      
+    <div class="col-md-6 my-service-p">
+       <p class="text-justify">{{services.Long_description | safe}}</p>  
+    </div>
+    <div class="col-md-6">
+      <img src="/media/{{services.Homeserviceimage}}" class="image-view" style="width: 500px;">
+    </div>
+  </div>
+  </div>
+</section>
+<section>
+  <div class="container py-4">
+    <div class="row shadow-none">
+      <div class="col-md-6">
+        <img src='/media/{{services.related.Homeserviceimages2}}' class="image-view" style="width: 500px;">
+      </div>
+      <div class="col-md-6">
+        <img src='/media/{{services.related.Homeserviceimages2}}' class="image-view" style="width: 500px;">
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static%}
+{% block title %} Login {% endblock %}
+{% block content %}
+<section class="login-container">
+   <section  id="about_image_back_service" style="background:url('/static/image/about3.jpg');background-repeat: no-repeat;  background-attachment: fixed;background-size: cover; background-position: center; height: auto;">
+      <div style="background: #000000b4;padding:0px 0px 100px 0px;">
+        <div class="container">
+          <h1 class="text-center services-heading">Login</h1>
+          <!-- <h4 class="text-center text-white">Revolutionising the concept of software development through path-breaking innovation</h4>
+          <p  class="text-center text-white">We are innovators, thinkers, and makers at your service. Dedicating our extensive knowledge to create user-centric designs backed.</p> -->
+        </div>
+       </div>
+  </section>
+<div class="container py-4">
+     <div class="row" style="margin: 100px 0px 50px 0px;">
+        <div class="col-md-6 col-sm-12 shadow-lg p-4 mb-4 bg-white">
+            <h3 class="text-center">Login</h3>
+           <div class="login-form">
+              <form method="POST" action="/login">
+                {% csrf_token %}
+                 <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="email">
+                 </div>
+                 <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password" placeholder="Password">
+                 </div>
+                 <input type="hidden" name="next" value="{{ request.GET.next }}"/>
+                 <button type="submit" class="btn btn-primary">Login</button>
+              </form>
+           </div>
+        </div>  
+    </div>   
+    </div>
+</section>
+{% endblock %}

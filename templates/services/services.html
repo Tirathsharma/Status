@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load static%}
+{% block title %} Services {% endblock %}
+{% block content %}
+    <section  id="about_image_back_service" style="background:url('/static/image/children-593313_1920.jpg');background-repeat: no-repeat;  background-attachment: fixed;background-size: cover; background-position: center; height: auto;text-align: center;">
+      <div style="background: #000000b4;padding:0px 0px 100px 0px;">
+        <div class="container">
+          <h1 class="text-center services-heading">Services</h1>
+          <h4 class="text-center  text-white">Want to scale up your business? Now is the perfect time to start with the
+            best platform and finest idea to help you grow and succeed.</h4>
+          <p  class="text-center text-white">From Startups to Enterprises, Products to Service Companies, Mobcoder caters to all the app development requirements in the same manner.</p>
+        </div>
+       </div>
+    </section>
+    <div id="services" class="services-area p-4">
+      <div class="container">
+        <div class="row">
+          {% for service in service %}
+          <div class="col-md-3 py-4">
+          <div class="card border" style="box-shadow: 0 0  20px;height: 100%; border-radius: 0px;">
+              <img class="card_image" src="media/{{service.Homeserviceimage}}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="h6 fw-bold">{{service.name}}</h5>
+                <p class="card-text">{{service.Short_description}}</p>
+                <a href="/service/{{service.short_name}}" class="btn px-10 py-1 text-white mt-0 mt-sm-0 .btn-get-started" style="border-radius: 30px; background-color: #9B5DE5;bottom:-20px;position: absolute;    left: 50px;
+                right: 50px;">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+            {% endfor%}
+      </div>    
+    </div>          
+    </div>
+
+    <div>
+      <div class="container">
+      <div class="row py-4 row-contents">
+        {% for x in services %}
+        {% if forloop.counter|divisibleby:2 %}
+        <div class="col-md-4 py-4">
+          {% if x.Homeserviceimages3  %}
+          <img src="/media/{{x.Homeserviceimages3}}" class="image-view">
+          {% endif %}
+        </div>
+        
+        <div class="col-md-8  py-4">
+          {% if x.name  %}
+          <h5 class="text-justify">{{x.name}}</h5>
+          {% endif %}
+          {% if x.more_description  %}
+           <p class="text-justify">{{x.more_description}}</p>  
+          {% endif %}
+        </div>
+        {% else %}
+        <div class="col-md-8 py-4">
+          {% if x.name  %}
+          <h5 class="text-justify">{{x.name}}</h5>
+          {% endif %}
+          {% if x.more_description  %}
+           <p class="text-justify">{{x.more_description | safe}}</p> 
+          {% endif %} 
+        </div>
+        <div class="col-md-4 py-4">
+          {% if x.Homeserviceimages3  %}
+          <img src="/media/{{x.Homeserviceimages3}}" class="image-view">
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {% endfor %}      
+      </div>
+      
+      </div>
+    </div>
+  {% endblock %}
+  

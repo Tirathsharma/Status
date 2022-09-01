@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load static%}
+{% block title %} Contact {% endblock %}
+{% block content %}
+<section  id="about_image_back_service" style="background:url('/static/image/children-593313_1920.jpg');background-repeat: no-repeat;  background-attachment: fixed;background-size: cover; background-position: center; height: auto;text-align: center;">
+  <div style="background: #000000b4;padding:0px 0px 100px 0px;">
+    <div class="container">
+      <h1 class="text-center services-heading">Contact</h1>
+      <!-- <h4 class="text-center  text-white">Want to scale up your business? Now is the perfect time to start with the
+        best platform and finest idea to help you grow and succeed.</h4>
+      <p  class="text-center text-white">From Startups to Enterprises, Products to Service Companies, Mobcoder caters to all the app development requirements in the same manner.</p> -->
+    </div>
+   </div>
+</section> 
+    <section>
+        <div style="padding:50px 0px 50px 0px;">
+          <div class="container">
+          <div class="row py-4 row-contents">
+            <!-- <h1 class="text-center services-heading">Contact</h1>
+            <h4 class="text-center text-white">What are you looking for?</h4> -->
+            <div class="col-md-6 py-4">
+              <h4 class="px-4">Lets move a head with us</h4>
+              <div class="row py-4 px-4">
+                <div class="col-md-4">
+                  <i class="fa fa-phone" aria-hidden="true"> U.S</i>
+                </div> 
+                <div class="col-md-8">
+                  <h6>+1 609-676-2565</h6>
+                </div>
+                <div class="col-md-4">
+                  <i class="fa fa-phone" aria-hidden="true"> India</i>
+                </div> 
+                <div class="col-md-8">
+                  <h6>+91 999-700-4683</h6>
+                </div>
+                <div class="col-md-4">
+                  <i class="fa fa-home" aria-hidden="true">Address United states</i>
+                </div> 
+                <div class="col-md-8">
+                  <h6><p>12651 San Pablo Ave, P.O. Box 5261, Richmond, Ca 94805, US</p></h6>
+                </div>
+                <div class="col-md-4">
+                  <i class="fa fa-home" aria-hidden="true">Address Meerut</i>
+                </div> 
+                <div class="col-md-8">
+                  <h6><p>Pandav Nagar,Meerut,250001</p></h6>
+                </div>                            
+              </div>
+            </div>
+            <div class="col-md-6 py-4">
+              <h5 class="">SALES/PROJECT INQUIRIES</h5>
+              <p class="text-justify">Let's start working together on your amazing projects.
+                Challenge us. We want to work with you to create the really cool stuff.</p>
+            </div>
+          </div>
+          </div>
+        </div>
+    </section>
+    <section>
+      <div class="container py-4">
+           <div class="row">
+              <div class="col-md-12 col-sm-12 shadow-lg p-4 mb-4 bg-white">
+                  <h3 class="text-center">Contact</h3>
+                  <div class="login-form">
+                    <form method="POST" action="/contact">
+                      {% csrf_token %}
+                      <div class="row">
+                          <div class="form-group col-md-4">
+                     
+                              <input type="Username" class="form-control" name="Username" placeholder="YOUR NAME*" required>
+                           </div>
+                          <div class="form-group col-md-4">
+                
+                          <input type="email" class="form-control" name="email" placeholder="YOUR EMAIL*" required>
+                       </div>
+                       <div class="form-group col-md-4">
+                          <input type="tel" class="form-control" name="phone" placeholder="YOUR CONTACT*" required>
+                       </div>
+                       <div class="form-group col-md-4">
+                        <textarea name="project_detail" id="exampleFormControlTextarea3" rows="1" class="form-control md-textarea" required>PROJECT DETAILS*</textarea>
+                      </div>
+                      <div class="form-group col-md-4">
+                        <input type="tel" class="form-control" name="budget" placeholder="YOUR BUDGET* " required>
+                     </div>
+
+                       <input type="hidden" name="register" value="{{ request.GET.register }}"/>
+                       <button type="submit" class="btn button">Send Request</button>
+               
+                      </div>
+                      </form>
+      
+              </div>
+              </div>  
+          </div>   
+          </div>
+      </section>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3489.968029107099!2d77.73172331545648!3d28.98831838227875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5f0daf2173b%3A0xecaee728f4a6dd3e!2ssavantinfolabs!5e0!3m2!1sen!2sin!4v1631886194458!5m2!1sen!2sin" style="border:0;width: 100%;height: 400px;" allowfullscreen="" loading="lazy"></iframe>
+  </main>
+  {% endblock %}
+  
