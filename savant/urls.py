@@ -13,9 +13,6 @@ urlpatterns = [
     path('',include('service.urls')),
     path('',include('video.urls')),
     path('login/admin', admin.site.urls),
-    path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
-    path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
-
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
