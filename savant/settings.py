@@ -37,7 +37,7 @@ EMAIL_HOST_PASSWORD = 'giwisqtaubaedlnh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','https://bapmcourse1.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1','bapmcourse1.herokuapp.com']
 
 AUTH_USER_MODEL='users.CustomUser'
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
@@ -149,7 +149,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'assets')
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static/')
 ]
