@@ -4,6 +4,7 @@ from django.contrib.auth.models import AbstractUser
 from django.conf import settings
 from tinymce import models as tinymce_models
 from datetime import date
+
 class CustomUser(AbstractUser):  
     username = models.CharField(max_length = 50, blank = True, null = True, unique = True)
     email = models.EmailField(('email address'), unique = True)
